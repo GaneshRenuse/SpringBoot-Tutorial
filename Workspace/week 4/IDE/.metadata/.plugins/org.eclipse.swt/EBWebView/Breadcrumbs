@@ -1,0 +1,78 @@
+1:57:03 Memory Pressure: Moderate
+1:57:13 Memory Pressure: Moderate
+1:57:38 Memory Pressure: Moderate
+1:57:48 Memory Pressure: Moderate
+1:57:58 Memory Pressure: Moderate
+1:58:08 Memory Pressure: Moderate
+1:58:18 Memory Pressure: Moderate
+1:58:28 Memory Pressure: Moderate
+1:58:38 Memory Pressure: Moderate
+1:58:48 Memory Pressure: Moderate
+1:58:58 Memory Pressure: Moderate
+2:10:29 Memory Pressure: Moderate
+2:10:59 Memory Pressure: Moderate
+2:11:59 Memory Pressure: Moderate
+2:20:45 Memory Pressure: Moderate
+2:25:00 Memory Pressure: Moderate
+2:25:10 Memory Pressure: Moderate
+2:26:45 Memory Pressure: Moderate
+2:26:55 Memory Pressure: Moderate
+2:27:06 Memory Pressure: Moderate
+2:27:46 Memory Pressure: Moderate
+2:27:56 Memory Pressure: Moderate
+2:28:06 Memory Pressure: Moderate
+2:28:16 Memory Pressure: Moderate
+2:28:26 Memory Pressure: Moderate
+2:28:36 Memory Pressure: Moderate
+2:28:46 Memory Pressure: Moderate
+2:28:56 Memory Pressure: Moderate
+2:29:06 Memory Pressure: Moderate
+2:29:16 Memory Pressure: Moderate
+2:29:26 Memory Pressure: Moderate
+2:29:36 Memory Pressure: Moderate
+2:29:46 Memory Pressure: Moderate
+2:29:56 Memory Pressure: Moderate
+2:30:06 Memory Pressure: Moderate
+2:30:16 Memory Pressure: Moderate
+2:30:26 Memory Pressure: Moderate
+2:30:36 Memory Pressure: Moderate
+2:30:46 Memory Pressure: Moderate
+2:30:56 Memory Pressure: Moderate
+2:31:06 Memory Pressure: Moderate
+2:31:16 Memory Pressure: Moderate
+2:31:26 Memory Pressure: Moderate
+2:31:36 Memory Pressure: Moderate
+2:31:46 Memory Pressure: Moderate
+2:31:56 Memory Pressure: Moderate
+2:32:06 Memory Pressure: Moderate
+2:32:16 Memory Pressure: Moderate
+2:40:27 Memory Pressure: Moderate
+2:40:37 Memory Pressure: Moderate
+2:40:47 Memory Pressure: Moderate
+2:40:57 Memory Pressure: Moderate
+2:41:07 Memory Pressure: Moderate
+2:41:17 Memory Pressure: Moderate
+2:41:32 Memory Pressure: Moderate
+2:42:22 Memory Pressure: Moderate
+2:45:32 Memory Pressure: Moderate
+2:48:20 Microsoft.Shutdown.OnWindowClosing
+2:48:20 Microsoft.Shutdown.OnWindowClosing_MaybeClearBrowsingDataOnExit
+2:48:20 Microsoft.Shutdown.OnWindowClosing_ClearBrowsingDataOnExitNotInProgress
+2:48:20 Microsoft.Shutdown.OnWindowClosingPostClearBrowsingData_NoBrowsingDataCleared
+2:48:20 Tab1 RenderProcessGone
+2:48:20 Browser1 Close Tab1 at 0
+2:48:20 Tab1 WebContentsDestroyed
+2:48:20 Microsoft.Shutdown.OnWindowClosing
+2:48:20 Microsoft.Shutdown.OnWindowClosingPostClearBrowsingData_NoBrowsingDataCleared
+2:48:20 Widget Closed: BrowserFrame
+2:48:20 Microsoft.Shutdown.OnWindowClosing
+2:48:20 Microsoft.Shutdown.OnWindowClosingPostClearBrowsingData_NoBrowsingDataCleared
+2:48:20 Microsoft.Last_Browser_Removed
+2:48:20 Microsoft.Shutdown.ShutdownIfNoBrowsers
+2:48:20 Microsoft.Shutdown.SetTryingToQuit_Quitting
+2:48:20 Microsoft.Shutdown.NotifyAppTerminating
+2:48:20 Microsoft.Shutdown.OnAppExiting
+2:48:20 Microsoft.Shutdown.HandleAppExitingForPlatform_Aura
+2:48:20 Microsoft.Shutdown.HandleAppExitingForPlatform_Aura.NotificationUIManager_StartShutdown
+2:48:20 Microsoft.Shutdown.HandleAppExitingForPlatform_Aura.CloseAllSecondaryWidgets
+2:48:20 Shutdown
