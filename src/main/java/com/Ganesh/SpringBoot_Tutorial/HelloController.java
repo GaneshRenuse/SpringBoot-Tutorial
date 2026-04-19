@@ -1,13 +1,13 @@
 package com.Ganesh.SpringBoot_Tutorial;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import java.util.HashMap;
-import java.util.Map;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.*;
 
 @RestController
 public class HelloController {
+
+    List<User> users = new ArrayList<>();
 
     @GetMapping("/hello")
     public String sayHello() {
@@ -30,5 +30,16 @@ public class HelloController {
         user.put("name", "Ganesh");
         user.put("role", "Developer");
         return user;
+    }
+
+    @PostMapping("/addUser")
+    public User addUser(@RequestBody User user) {
+        users.add(user);
+        return user;
+    }
+
+    @GetMapping("/getUsers")
+    public List<User> getUsers() {
+        return users;
     }
 }
