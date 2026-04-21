@@ -1,4 +1,4 @@
-package com.Ganesh.SpringBoot_Tutorial;
+package com.Ganesh.SpringBoot_Tutorial.model;
 
 public class User {
 
