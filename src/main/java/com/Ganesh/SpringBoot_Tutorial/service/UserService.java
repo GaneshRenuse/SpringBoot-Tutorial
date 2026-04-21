@@ -1,22 +1,23 @@
 package com.Ganesh.SpringBoot_Tutorial.service;
 
 import com.Ganesh.SpringBoot_Tutorial.model.User;
+import com.Ganesh.SpringBoot_Tutorial.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class UserService {
 
-    List<User> users = new ArrayList<>();
+    @Autowired
+    UserRepository userRepository;
 
     public User addUser(User user) {
-        users.add(user);
-        return user;
+        return userRepository.save(user);
     }
 
     public List<User> getUsers() {
-        return users;
+        return userRepository.findAll();
     }
 }

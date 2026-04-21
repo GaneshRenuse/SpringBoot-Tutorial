@@ -1,27 +1,38 @@
 package com.Ganesh.SpringBoot_Tutorial.model;
 
+import jakarta.persistence.*;
+
+@Entity
 public class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
     private String name;
     private int age;
 
-    // Getter
     public String getName() {
         return name;
     }
 
-    // Setter
     public void setName(String name) {
         this.name = name;
     }
 
-    // Getter
     public int getAge() {
         return age;
     }
 
-    // Setter
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
