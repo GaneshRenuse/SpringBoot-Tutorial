@@ -3,6 +3,7 @@ package com.Ganesh.SpringBoot_Tutorial.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "users")
 public class User {
 
     @Id
