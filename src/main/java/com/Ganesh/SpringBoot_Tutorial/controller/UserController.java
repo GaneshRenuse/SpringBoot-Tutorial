@@ -2,6 +2,7 @@ package com.Ganesh.SpringBoot_Tutorial.controller;
 
 import com.Ganesh.SpringBoot_Tutorial.model.User;
 import com.Ganesh.SpringBoot_Tutorial.service.UserService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +15,7 @@ public class UserController {
     UserService userService;
 
     @PostMapping("/addUser")
-    public User addUser(@RequestBody User user) {
+    public User addUser(@Valid @RequestBody User user) {
         return userService.addUser(user);
     }
 
@@ -29,7 +30,7 @@ public class UserController {
     }
 
     @PutMapping("/updateUser/{id}")
-    public User updateUser(@PathVariable int id, @RequestBody User user) {
+    public User updateUser(@PathVariable int id, @Valid @RequestBody User user) {
         return userService.updateUser(id, user);
     }
 
