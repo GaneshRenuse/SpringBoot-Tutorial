@@ -1,5 +1,6 @@
 package com.Ganesh.SpringBoot_Tutorial.service;
 
+import com.Ganesh.SpringBoot_Tutorial.dto.UserDTO;
 import com.Ganesh.SpringBoot_Tutorial.exception.UserNotFoundException;
 import com.Ganesh.SpringBoot_Tutorial.model.User;
 import com.Ganesh.SpringBoot_Tutorial.repository.UserRepository;
@@ -14,27 +15,35 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
-    public User addUser(User user) {
-        return userRepository.save(user);
+    public UserDTO addUser(UserDTO dto) {
+        User user = convertToEntity(dto);
+        User savedUser = userRepository.save(user);
+        return convertToDTO(savedUser);
     }
 
-    public List<User> getUsers() {
-        return userRepository.findAll();
+    public List<UserDTO> getUsers() {
+        return userRepository.findAll()
+                .stream()
+                .map(this::convertToDTO)
+                .toList();
     }
 
-    public User getUserById(int id) {
-        return userRepository.findById(id)
+    public UserDTO getUserById(int id) {
+        User user = userRepository.findById(id)
                 .orElseThrow(() -> new UserNotFoundException("User not found with id: " + id));
+
+        return convertToDTO(user);
     }
 
-    public User updateUser(int id, User newUser) {
+    public UserDTO updateUser(int id, UserDTO dto) {
         User existingUser = userRepository.findById(id)
                 .orElseThrow(() -> new UserNotFoundException("User not found with id: " + id));
 
-        existingUser.setName(newUser.getName());
-        existingUser.setAge(newUser.getAge());
+        existingUser.setName(dto.getName());
+        existingUser.setAge(dto.getAge());
 
-        return userRepository.save(existingUser);
+        User updatedUser = userRepository.save(existingUser);
+        return convertToDTO(updatedUser);
     }
 
     public String deleteUser(int id) {
@@ -44,5 +53,21 @@ public class UserService {
 
         userRepository.deleteById(id);
         return "User deleted successfully";
+    }
+
+    private UserDTO convertToDTO(User user) {
+        UserDTO dto = new UserDTO();
+        dto.setId(user.getId());
+        dto.setName(user.getName());
+        dto.setAge(user.getAge());
+        return dto;
+    }
+
+    private User convertToEntity(UserDTO dto) {
+        User user = new User();
+        user.setId(dto.getId());
+        user.setName(dto.getName());
+        user.setAge(dto.getAge());
+        return user;
     }
 }
