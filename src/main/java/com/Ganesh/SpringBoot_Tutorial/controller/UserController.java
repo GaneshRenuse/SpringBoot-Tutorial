@@ -1,6 +1,7 @@
 package com.Ganesh.SpringBoot_Tutorial.controller;
 
 import com.Ganesh.SpringBoot_Tutorial.dto.UserDTO;
+import com.Ganesh.SpringBoot_Tutorial.response.ApiResponse;
 import com.Ganesh.SpringBoot_Tutorial.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,27 +16,32 @@ public class UserController {
     UserService userService;
 
     @PostMapping("/addUser")
-    public UserDTO addUser(@Valid @RequestBody UserDTO user) {
-        return userService.addUser(user);
+    public ApiResponse<UserDTO> addUser(@Valid @RequestBody UserDTO user) {
+        UserDTO savedUser = userService.addUser(user);
+        return new ApiResponse<>("success", "User added successfully", savedUser);
     }
 
     @GetMapping("/getUsers")
-    public List<UserDTO> getUsers() {
-        return userService.getUsers();
+    public ApiResponse<List<UserDTO>> getUsers() {
+        List<UserDTO> users = userService.getUsers();
+        return new ApiResponse<>("success", "Users fetched successfully", users);
     }
 
     @GetMapping("/getUser/{id}")
-    public UserDTO getUser(@PathVariable Integer id) {
-        return userService.getUserById(id);
+    public ApiResponse<UserDTO> getUser(@PathVariable Integer id) {
+        UserDTO user = userService.getUserById(id);
+        return new ApiResponse<>("success", "User fetched successfully", user);
     }
 
     @PutMapping("/updateUser/{id}")
-    public UserDTO updateUser(@PathVariable Integer id, @Valid @RequestBody UserDTO user) {
-        return userService.updateUser(id, user);
+    public ApiResponse<UserDTO> updateUser(@PathVariable Integer id, @Valid @RequestBody UserDTO user) {
+        UserDTO updatedUser = userService.updateUser(id, user);
+        return new ApiResponse<>("success", "User updated successfully", updatedUser);
     }
 
     @DeleteMapping("/deleteUser/{id}")
-    public String deleteUser(@PathVariable int id) {
-        return userService.deleteUser(id);
+    public ApiResponse<String> deleteUser(@PathVariable Integer id) {
+        userService.deleteUser(id);
+        return new ApiResponse<>("success", "User deleted successfully", null);
     }
 }
