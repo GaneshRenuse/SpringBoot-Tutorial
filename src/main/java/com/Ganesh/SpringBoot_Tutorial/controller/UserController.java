@@ -1,7 +1,6 @@
 package com.Ganesh.SpringBoot_Tutorial.controller;
 
 import com.Ganesh.SpringBoot_Tutorial.dto.UserDTO;
-import com.Ganesh.SpringBoot_Tutorial.model.User;
 import com.Ganesh.SpringBoot_Tutorial.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
