@@ -22,8 +22,13 @@ public class UserController {
     }
 
     @GetMapping("/getUsers")
-    public ApiResponse<List<UserDTO>> getUsers() {
-        List<UserDTO> users = userService.getUsers();
+    public ApiResponse<List<UserDTO>> getUsers(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "5") int size,
+            @RequestParam(defaultValue = "id") String sortBy) {
+
+        List<UserDTO> users = userService.getUsers(page, size, sortBy);
+
         return new ApiResponse<>("success", "Users fetched successfully", users);
     }
 

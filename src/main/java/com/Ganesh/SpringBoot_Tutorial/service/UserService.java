@@ -5,9 +5,13 @@ import com.Ganesh.SpringBoot_Tutorial.exception.UserNotFoundException;
 import com.Ganesh.SpringBoot_Tutorial.model.User;
 import com.Ganesh.SpringBoot_Tutorial.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Sort;
 
 import java.util.List;
 
@@ -30,17 +34,18 @@ public class UserService {
         return convertToDTO(savedUser);
     }
 
-    public List<UserDTO> getUsers() {
-        logger.info("Fetching all users");
+    public List<UserDTO> getUsers(int page, int size, String sortBy) {
 
-        List<UserDTO> users = userRepository.findAll()
+        logger.info("Fetching users page: {}, size: {}, sorted by: {}", page, size, sortBy);
+
+        Pageable pageable = PageRequest.of(page, size, Sort.by(sortBy));
+
+        Page<User> userPage = userRepository.findAll(pageable);
+
+        return userPage.getContent()
                 .stream()
                 .map(this::convertToDTO)
                 .toList();
-
-        logger.info("Total users fetched: {}", users.size());
-
-        return users;
     }
 
     public UserDTO getUserById(int id) {
