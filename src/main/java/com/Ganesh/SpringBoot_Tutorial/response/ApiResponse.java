@@ -4,6 +4,8 @@ public class ApiResponse<T> {
 
     private String status;
     private String message;
+
+    @io.swagger.v3.oas.annotations.media.Schema(hidden = false)
     private T data;
 
     public ApiResponse() {}

@@ -12,7 +12,7 @@
 	<artifactId>SpringBoot-Tutorial</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SpringBoot-Tutorial</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Project To Learn Spring Boot</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -64,7 +64,7 @@
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-			<version>2.5.0</version>
+			<version>2.6.0</version>
 		</dependency>
 	</dependencies>
 
