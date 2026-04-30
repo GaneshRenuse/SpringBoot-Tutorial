@@ -24,33 +24,33 @@ Prerequisites
 
 ## Progress Bar
 
-| Day    | Progress                                                                                                                             |
-|--------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Day 1  | 1) Building and setting up enviorment<br/>2) Writing and understanding basic structure<br/>3) Wriitng basic APIS to understand workflow |
-| Day 2  |                                                                                                                                      |
-| Day 3  |                                                                                                                                      |
-| Day 4  |                                                                                                                                      |
-| Day 5  |                                                                                                                                      |
-| Day 6  |                                                                                                                                      |
-| Day 7  |                                                                                                                                      |
-| Day 8  |                                                                                                                                      |
-| Day 9  |                                                                                                                                      |
-| Day 10 |                                                                                                                                      |
-| Day 11 |                                                                                                                                      |
-| Day 12 |                                                                                                                                      |
-| Day 13 |                                                                                                                                      |
-| Day 14 |                                                                                                                                      |
-| Day 15 |                                                                                                                                      |
-| Day 16 |                                                                                                                                      |
-| Day 17 |                                                                                                                                      |
-| Day 18 |                                                                                                                                      |
-| Day 19 |                                                                                                                                      |
-| Day 20 |                                                                                                                                      |
-| Day 21 |                                                                                                                                      |
-| Day 22 |                                                                                                                                      |
-| Day 23 |                                                                                                                                      |
-| Day 24 |                                                                                                                                      |
-| Day 25 |                                                                                                                                      |
-| Day 26 |                                                                                                                                      |
-| Day 27 |                                                                                                                                      |
-| Day 28 |                                                                                                                                      |
+| Day    | Progress                                                                                                   |
+|--------|------------------------------------------------------------------------------------------------------------|
+| Day 1  | Introduction to Spring Boot, understanding project structure, and setting up the environment.              |
+| Day 2  | Learned about REST APIs, controllers, and handling HTTP requests using basic endpoints.                    |
+| Day 3  | Implemented CRUD operations and understood how APIs interact with client and server.                       |
+| Day 4  | Introduced Service layer and separation of concerns for better architecture.                               |
+| Day 5  | Connected application to database using JPA and understood entity mapping.                                 |
+| Day 6  | Implemented Exception Handling using custom exceptions and global exception handler.                       |
+| Day 7  | Learned Validation techniques using annotations and ensured proper error responses.                        |
+| Day 8  | Introduced DTO concept to separate internal data structure from API response for security and flexibility. |
+| Day 9  | Implemented standardized API responses and improved response structure.                                    |
+| Day 10 | Added Logging, API documentation using Swagger, and learned debugging real-world dependency issues.        |
+| Day 11 |                                                                                                            |
+| Day 12 |                                                                                                            |
+| Day 13 |                                                                                                            |
+| Day 14 |                                                                                                            |
+| Day 15 |                                                                                                            |
+| Day 16 |                                                                                                            |
+| Day 17 |                                                                                                            |
+| Day 18 |                                                                                                            |
+| Day 19 |                                                                                                            |
+| Day 20 |                                                                                                            |
+| Day 21 |                                                                                                            |
+| Day 22 |                                                                                                            |
+| Day 23 |                                                                                                            |
+| Day 24 |                                                                                                            |
+| Day 25 |                                                                                                            |
+| Day 26 |                                                                                                            |
+| Day 27 |                                                                                                            |
+| Day 28 |                                                                                                            |
