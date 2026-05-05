@@ -1,6 +1,8 @@
 package com.Ganesh.SpringBoot_Tutorial.auth.dto;
 
 public class AuthRequest {
+
+    public AuthRequest() {}
     private String username;
     private String password;
 

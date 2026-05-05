@@ -15,7 +15,6 @@ public class AuthController {
     @PostMapping("/login")
     public AuthResponse login(@RequestBody AuthRequest request) {
 
-        // TEMPORARY (we'll improve later)
         if ("admin".equals(request.getUsername()) &&
                 "password".equals(request.getPassword())) {
 
