@@ -19,8 +19,8 @@ public class SecurityConfig {
                         .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
                         .anyRequest().permitAll()
                 )
-                .formLogin(AbstractHttpConfigurer::disable)   // 🔥 IMPORTANT
-                .httpBasic(AbstractHttpConfigurer::disable); // 🔥 IMPORTANT
+                .formLogin(AbstractHttpConfigurer::disable)
+                .httpBasic(AbstractHttpConfigurer::disable);
 
         return http.build();
     }
